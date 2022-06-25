@@ -75,3 +75,25 @@ function getInputValue(burger, price){
     const burgerTotal = burgerInputFieldNumber * price;
     return burgerTotal;
 }
+
+/* remove one burger using event delegate*/
+document.getElementById('cheeseBurger-remove').addEventListener('click', function(event) {
+    document.getElementById('cheeseBurger-number').value = 0;
+    calculateBurgerTotal();
+
+    /* console.log(event.target);
+    console.log(event.target.parentNode);
+    console.log(event.target.parentNode.parentNode); */
+    
+    event.target.parentNode.parentNode.removeChild(document.getElementById('box-item1'));
+})
+document.getElementById('beefBurger-remove').addEventListener('click', function(event) {
+    document.getElementById('beefBurger-number').value = 0;
+    calculateBurgerTotal();
+
+    /* console.log(event.target);
+    console.log(event.target.parentNode);
+    console.log(event.target.parentNode.parentNode); */
+    
+    event.target.parentNode.parentNode.removeChild(document.getElementById('box-item2'));
+})
