@@ -17,6 +17,7 @@ document.getElementById("beefBurger-plus").addEventListener("click", function ()
   const totalPrice = subTotal + tax;
   if (subTotal != tax) {
     document.getElementById("total-price").innerText = Math.floor(totalPrice).toFixed(2);
+    // console.log("happy foodie", + totalPrice);
   } else {
     document.getElementById("total-price").innerText = totalPrice.toFixed(2);
   }
